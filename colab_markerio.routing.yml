@@ -1,0 +1,7 @@
+markerio.settings:
+  path: '/admin/config/system/markerio'
+  defaults:
+    _title: 'Marker.io settings'
+    _form: 'Drupal\colab_markerio\Form\SettingsForm'
+  requirements:
+    _permission: 'administer markerio configuration'

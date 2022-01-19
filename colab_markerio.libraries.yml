@@ -1,0 +1,6 @@
+# Custom module library for general purposes.
+markerio:
+  js:
+    js/markerio.js: {}
+  dependencies:
+    - core/drupalSettings

@@ -1,0 +1,5 @@
+name: 'COLAB Marker.io'
+type: module
+description: 'A custom module for adding Marker.io scripts to Pantheon hosted Drupal sites'
+core_version_requirement: ^8.8 || ^9
+package: 'COLAB'

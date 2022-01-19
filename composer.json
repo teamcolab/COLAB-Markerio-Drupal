@@ -1,0 +1,15 @@
+{
+  "name": "colab/colab_markerio",
+  "description": "A custom module for adding Marker.io scripts to Pantheon hosted Drupal sites",
+  "type": "drupal-module",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/teamcolab/COLAB-Markerio-Drupal",
+  "minimum-stability": "dev",
+  "support": {
+    "source": "https://github.com/teamcolab/COLAB-Markerio-Drupal"
+  },
+  "require": {}
+}

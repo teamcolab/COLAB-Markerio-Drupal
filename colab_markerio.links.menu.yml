@@ -1,0 +1,6 @@
+markerio.settings_form:
+  title: Marker.io
+  description: Configure Marker.io.
+  parent: system.admin_config_system
+  route_name: markerio.settings
+  weight: 10
