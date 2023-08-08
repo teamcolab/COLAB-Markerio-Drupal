@@ -12,15 +12,18 @@ function colab_markerio_page_attachments(array &$page) {
   $destination = \Drupal::config('colab_markerio.settings')->get('destination');
   $user = \Drupal::currentUser();
 
-  $environment = getenv('PANTHEON_ENVIRONMENT') ? : '';
+  $pantheon_environment = getenv('PANTHEON_ENVIRONMENT') ? : '';
+  $acquia_environment = getenv('AH_SITE_ENVIRONMENT') ? : '';
+  $admin_route = \Drupal::service('router.admin_context')->isAdminRoute();
 
   // We don't want the widget to appear on production unless permission state otherwise
   // We don't want the widget to appear if a destination has not been configured
   // We do want the widget to appear on any non-prod environments regardless of authentication
-  if ( ($user->hasPermission('access markerio') || $environment != 'live') && isset($destination) ) {
-    // Prepare javascript.
-    $page['#attached']['library'][] = 'colab_markerio/markerio';
-    $page['#attached']['drupalSettings']['markerio']['destination'] = $destination;
-
+  if(!$admin_route){
+    if ( ($user->hasPermission('access markerio') || ($pantheon_environment != 'live' && $acquia_environment != 'prod')) && isset($destination) ) {
+      // Prepare javascript.
+      $page['#attached']['library'][] = 'colab_markerio/markerio';
+      $page['#attached']['drupalSettings']['markerio']['destination'] = $destination;
+    }
   }
 }
