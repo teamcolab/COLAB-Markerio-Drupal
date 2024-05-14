@@ -4,3 +4,4 @@ markerio:
     js/markerio.js: {}
   dependencies:
     - core/drupalSettings
+    - core/loadjs
