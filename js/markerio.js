@@ -3,9 +3,9 @@
  * Initialize Marker.io service.
  */
 
-"use strict";
 
 (function (window, drupalSettings) {
+  "use strict";
   // Initialize variables.
   var destination;
 
